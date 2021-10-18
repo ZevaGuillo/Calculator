@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Gluten&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Gluten', cursive;
+}
+
+body{
+    background-color: #011F26;
+    color:aliceblue
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator{
+    display: grid;
+    background-color: #65BFB6;
+    grid-template-columns: repeat(4,75px);
+    grid-template-rows: 160px repeat(5,75px);
+    padding: 15px;
+    border-radius:32px;
+}
+
+button{
+    cursor: pointer;
+    margin: 5px;
+    padding:0;
+    border-radius: 10px;
+    border: none;
+    background-color: #3b726c;
+    color: #F28963;
+    font-size: 1.5em;
+    box-shadow: rgba(0, 0, 0, 0.5) 2.4px 2.4px 3.2px;
+    transition: all .2s;
+}
+
+button:hover{
+    transform: scale(1.05);
+}
+
+button:active{
+    background-color:#F28963;
+    color: rgb(50,50,50);
+    box-shadow: #8f503a 3px 3px 6px 0px inset, #f0ab92 -3px -3px 6px 1px inset;
+}
+
+.display{
+    grid-column: 1/ -1;
+    padding: 16px;
+    display: flex;
+    margin: 10px 10px 20px;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    border-radius: 32px;
+    background-color: #0B5959;
+    justify-content: space-between;
+    word-wrap: break-all;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.col-2{
+    grid-column: span 2;
+}
+
+.v-previous{
+    font: size 1.5em;
+}
+.v-current{
+    font-size: 2em;
+}
